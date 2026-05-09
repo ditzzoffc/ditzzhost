@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DITZZ HOSTING</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#050816;
+      color:white;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#2563eb;
+      filter:blur(180px);
+      top:-200px;
+      left:-150px;
+      opacity:.4;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:500px;
+      height:500px;
+      background:#7c3aed;
+      filter:blur(180px);
+      bottom:-200px;
+      right:-150px;
+      opacity:.4;
+      z-index:-1;
+    }
+
+    header{
+      width:100%;
+      padding:20px 8%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:fixed;
+      top:0;
+      z-index:1000;
+      background:rgba(0,0,0,.2);
+      backdrop-filter:blur(15px);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .logo{
+      font-size:28px;
+      font-weight:700;
+    }
+
+    .logo span{
+      color:#3b82f6;
+    }
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-direction:column;
+      text-align:center;
+      padding:140px 20px 60px;
+    }
+
+    .hero h1{
+      font-size:58px;
+      margin-bottom:15px;
+      line-height:1.1;
+    }
+
+    .hero h1 span{
+      color:#3b82f6;
+    }
+
+    .hero p{
+      color:#cbd5e1;
+      max-width:700px;
+      margin-bottom:50px;
+      font-size:16px;
+    }
+
+    .menu-grid{
+      width:100%;
+      max-width:900px;
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:25px;
+    }
+
+    .menu-card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:25px;
+      padding:35px 25px;
+      transition:.3s;
+      backdrop-filter:blur(15px);
+      position:relative;
+      overflow:hidden;
+    }
+
+    .menu-card:hover{
+      transform:translateY(-10px);
+      border-color:#3b82f6;
+      box-shadow:0 0 35px rgba(59,130,246,.25);
+    }
+
+    .menu-card::before{
+      content:'';
+      position:absolute;
+      width:120px;
+      height:120px;
+      background:#3b82f6;
+      border-radius:50%;
+      filter:blur(90px);
+      top:-30px;
+      right:-30px;
+      opacity:.3;
+    }
+
+    .icon{
+      font-size:45px;
+      margin-bottom:18px;
+    }
+
+    .menu-card h2{
+      margin-bottom:12px;
+      font-size:27px;
+    }
+
+    .menu-card p{
+      color:#cbd5e1;
+      font-size:14px;
+      margin-bottom:28px;
+      line-height:1.7;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:13px 28px;
+      background:#3b82f6;
+      color:white;
+      text-decoration:none;
+      border-radius:14px;
+      font-weight:600;
+      transition:.3s;
+    }
+
+    .btn:hover{
+      background:#2563eb;
+      transform:scale(1.05);
+    }
+
+    .contact-section{
+      width:100%;
+      max-width:750px;
+      margin-top:55px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+    }
+
+    .contact-card{
+      background:rgba(255,255,255,.05);
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:18px;
+      padding:18px;
+      text-align:center;
+      transition:.3s;
+      backdrop-filter:blur(10px);
+    }
+
+    .contact-card:hover{
+      transform:translateY(-6px);
+      border-color:#3b82f6;
+      box-shadow:0 0 25px rgba(59,130,246,.2);
+    }
+
+    .contact-card .icon{
+      font-size:28px;
+      margin-bottom:8px;
+    }
+
+    .contact-card h3{
+      font-size:15px;
+      margin-bottom:8px;
+    }
+
+    .contact-card a{
+      color:#3b82f6;
+      text-decoration:none;
+      font-size:13px;
+    }
+
+    footer{
+      padding:25px;
+      text-align:center;
+      color:#94a3b8;
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      .hero h1{
+        font-size:40px;
+      }
+
+      .hero p{
+        font-size:14px;
+      }
+
+      .menu-grid{
+        grid-template-columns:1fr;
+      }
+
+      .contact-section{
+        grid-template-columns:1fr;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">DITZZ<span>HOST</span></div>
+  </header>
+
+  <section class="hero">
+
+    <h1>WELCOME TO <span>DITZZ HOST</span></h1>
+
+    <p>
+      Layanan Jasteb Ter Cepat Dan Aman Masa Kini.
+    </p>
+
+    <div class="menu-grid">
+
+      <!-- JASTEB -->
+      <div class="menu-card">
+        <div class="icon">⚡</div>
+
+        <h2>JASTEB</h2>
+
+        <p>
+          Jasa tebar premium dengan proses cepat,
+          aman, dan terpercaya.
+        </p>
+
+        <a href="jasteb.html" class="btn">
+          Pilih Sekarang
+        </a>
+      </div>
+
+      <!-- PT JASTEB -->
+      <div class="menu-card">
+        <div class="icon">👑</div>
+
+        <h2>PT JASTEB</h2>
+
+        <p>
+          Layanan jasteb versi premium dengan fitur
+          dan akses lebih lengkap.
+        </p>
+
+        <a href="ptjasteb.html" class="btn">
+          Pilih Sekarang
+        </a>
+      </div>
+
+      <!-- SEWA PANEL JASTEB -->
+      <div class="menu-card">
+        <div class="icon">🖥️</div>
+
+        <h2>SEWA PANEL JASTEB</h2>
+
+        <p>
+          Sewa panel jasteb anti seret dan murah.
+        </p>
+
+        <a href="paneljasteb.html" class="btn">
+          Pilih Sekarang
+        </a>
+      </div>
+
+      <!-- TEAM RESS -->
+      <div class="menu-card">
+        <div class="icon">🔥</div>
+
+        <h2>TEAM RESS</h2>
+
+        <p>
+          Join team ress terbaik dengan
+          keuntungan dan akses spesial.
+        </p>
+
+        <a href="teamress.html" class="btn">
+          Pilih Sekarang
+        </a>
+      </div>
+
+    </div>
+
+    <!-- CONTACT -->
+    <div class="contact-section">
+
+      <div class="contact-card">
+        <div class="icon">📞</div>
+
+        <h3>CONTACT OWNER</h3>
+
+        <a href="https://wa.me/62887-4371-84044" target="_blank">
+          Klik Disini
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">📢</div>
+
+        <h3>SALURAN OWNER</h3>
+
+        <a href="https://whatsapp.com/channel/xxxxxxxx" target="_blank">
+          Klik Disini
+        </a>
+      </div>
+
+      <div class="contact-card">
+        <div class="icon">▶️</div>
+
+        <h3>YOUTUBE OWNER</h3>
+
+        <a href="https://youtube.com/@ditzzhosting" target="_blank">
+          Klik Disini
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 DITZZ HOSTING - ALL RIGHTS RESERVED
+  </footer>
+
+</body>
+</html>
